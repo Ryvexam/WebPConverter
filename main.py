@@ -10,7 +10,7 @@ def convert_to_webp(input_path, output_path):
 def scan_and_convert(root_folder):
     for foldername, subfolders, filenames in os.walk(root_folder):
         for filename in filenames:
-            if filename.lower().endswith(('.jpg', '.jpeg', '.png', '.avif')):
+            if filename.lower().endswith(('.jpg', '.jpeg', '.png')):
                 input_path = os.path.join(foldername, filename)
                 output_filename = os.path.splitext(filename)[0] + '.webp'
                 output_path = os.path.join(foldername, output_filename)
